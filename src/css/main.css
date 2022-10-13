@@ -6,12 +6,19 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
   min-height: 100vh;
   background-color: #4285f4;
+  padding: 2rem 5%;
 }
 
 li {
@@ -131,4 +138,15 @@ li {
   font-size: 1.06rem;
   padding: 0.94rem 0;
   margin: 0.94rem 0 1.3rem;
+}
+
+footer a {
+  color: #000;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=main.css.map */
