@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&family=Poppins:wght@300;400;700&display=swap');
 
+:root {
+  --base-color: #4285f4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +22,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   min-height: 100vh;
-  background-color: #4285f4;
+  background-color: var(--base-color);
   padding: 2rem 5%;
 }
 
@@ -103,7 +107,7 @@ li {
     }
     &#strong::before {
       width: 100%;
-      background-color: #4285f4;
+      background-color: var(--base-color);
     }
   }
 
@@ -157,7 +161,7 @@ li {
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #4285f4;
+    background-color: var(--base-color);
     color: #fff;
     font-size: 1.06rem;
     border-radius: 0.3rem;
@@ -166,6 +170,16 @@ li {
     font-size: 1.06rem;
     padding: 0.94rem 0;
     margin: 0.94rem 0 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border: 2px solid transparent;
+
+    &:hover {
+      transition: background, border-color, color 0.3s ease-in-out;
+      background-color: transparent;
+      border-color: var(--base-color);
+      color: var(--base-color);
+    }
   }
 }
 

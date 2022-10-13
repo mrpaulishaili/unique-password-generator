@@ -88,10 +88,10 @@ const InitAPP = () => {
   const copyPasword = () => {
     navigator.clipboard.writeText(passwordInput.value);
     copyIcon.innerText = 'check';
-    alert('Copied to clipboard');
     setTimeout(() => {
       copyIcon.innerText = 'copy_all';
     }, 1500);
+    alert('Copied to clipboard');
   };
 
   //   Initiaing functions to elements
