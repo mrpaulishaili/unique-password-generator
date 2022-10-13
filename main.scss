@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #4285f4;
+}
+
+li {
+  list-style: none;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 0.5rem;
+
+  // Container Title
+  h2 {
+    font-weight: 600;
+    font-size: 1.32rem;
+    padding: 1rem 1.175rem;
+    border-bottom: 1px solid #d4dbe5;
+  }
+
+  //   Wrapper
+  .wrapper {
+    margin: 1.25rem 1.75rem;
+  }
+
+  //   Input box
+  .input-box {
+    width: 100%;
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 3rem;
+      font-size: 1.06rem;
+      font-weight: 500;
+      border-radius: 0.25rem;
+      border: 1px solid #aaa;
+      color: #000;
+      padding: 0 2.85rem 0 1rem;
+
+      &:disabled {
+        background: none !important;
+      }
+    }
+
+    span {
+      position: absolute;
+      right: 0.8rem;
+      cursor: pointer;
+      line-height: 3rem;
+      color: #707070;
+    }
+  }
+
+  //   password indicator
+  .pass-indicator {
+    position: relative;
+    width: 100%;
+    height: 0.25rem;
+    background-color: #dfdfdf;
+    margin-top: 0.75rem;
+    border-radius: 1.25rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      width: 50%;
+      border-radius: inherit;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &#weak::before {
+      width: 20%;
+      background-color: #e64a4a;
+    }
+    &#medium::before {
+      width: 50%;
+      background-color: #f1c80b;
+    }
+    &#strong::before {
+      width: 100%;
+      background-color: #4285f4;
+    }
+  }
+
+  //   password length
+  .pass-length {
+    margin: 1.56rem 0 1.25rem;
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    input {
+      width: 100%;
+      height: 0.25rem;
+    }
+  }
+
+  //   password settings
+  .pass-settings {
+    .options {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+
+      .option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        width: calc(100% / 2);
+
+        &:first-child {
+          pointer-events: none;
+
+          input {
+            opacity: 0.7;
+          }
+        }
+
+        label {
+          cursor: pointer;
+          padding-left: 0.63rem;
+        }
+      }
+    }
+  }
+
+  //   generate password button
+  .generate-btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4285f4;
+    color: #fff;
+    font-size: 1.06rem;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.06rem;
+    padding: 0.94rem 0;
+    margin: 0.94rem 0 1.3rem;
+  }
+}
